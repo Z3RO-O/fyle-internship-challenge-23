@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+html,body,:root{
+    height: 100%;
+    background-color:white;
+    text-decoration: #224;
+    font-family: "Source Code Pro",sans-serif,monospace;
+}
+
