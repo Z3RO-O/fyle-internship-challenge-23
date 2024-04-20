@@ -1,1 +1,23 @@
-<p>user-profile works!</p>
+<app-input (searchUser)="getUserProfile($event)" />
+<div *ngIf="error" class="text-red-300 grid text-center text-2xl">
+  {{ error }}
+</div>
+<div *ngIf="isProfileLoading; else loadedContent">
+  <app-skeleton-user-details />
+</div>
+<ng-template #loadedContent>
+  <div *ngIf="!error">
+    <app-user-details [user]="user" />
+  </div>
+</ng-template>
+
+<div *ngIf="repos.length > 0 && !error">
+  <app-user-repos [repos]="repos" [isLoading]="isLoading" />
+  <app-pagination
+    [currentPage]="currentPage"
+    [totalPages]="totalPages"
+    (pageChange)="changePage($event)"
+    [itemsPerPage]="itemsPerPage"
+    (itemsPerPageChange)="onItemsPerPageChange($event)"
+  ></app-pagination>
+</div>

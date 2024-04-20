@@ -12,7 +12,7 @@ import {
   imports: [ReactiveFormsModule],
   templateUrl: './input.component.html',
 })
-export class UserFormComponent {
+export class InputComponent {
   usernameForm = new FormGroup({
     username: new FormControl('', Validators.required),
   });

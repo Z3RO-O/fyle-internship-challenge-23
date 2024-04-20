@@ -1,27 +1,24 @@
 <form
   [formGroup]="usernameForm"
   (ngSubmit)="onSubmit()"
-  class="m-4 flex flex-col justify-center items-center gap-y-4 border-[1px] border-neutral-100 p-4 rounded-lg"
+  class="m-4 flex flex-col justify-center items-center gap-y-4 p-4 rounded-lg"
 >
-  <h1 class="text-2xl xs:text-xl font-thin">
-    Give me the <span class="text-sky-200">Username</span>... I will find the
-    <span class="text-sky-200">Repositories</span>
-  </h1>
+  <h1 class="text-2xl xs:text-xl">Search for any valid GitHub Username</h1>
   <div class="flex w-full gap-y-2 gap-x-4">
     <input
       type="text"
       id="username"
-      placeholder="🔍 Username (eg. gajmain2020)"
-      class="w-full p-2 rounded-xl bg-neutral-900 outline outline-offset-0 outline-1 outline-neutral-600"
+      placeholder="🔍 Username"
+      class="w-full p-2 rounded-xl outline outline-offset-0 outline-1 outline-neutral-600"
       formControlName="username"
       required
     />
     <button
       type="submit"
       [disabled]="!usernameForm.valid"
-      class="primary text-sm font-semibold disabled:cursor-not-allowed disabled:bg-neutral-600"
+      class="primary p-2 rounded-lg text-sm font-semibold disabled:bg-white border-[1px] border-black"
     >
-      Get Repositories
+      Search
     </button>
   </div>
 </form>
