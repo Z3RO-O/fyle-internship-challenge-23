@@ -9,5 +9,12 @@ html,body,:root{
     background-color:white;
     text-decoration: #224;
     font-family: "Source Code Pro",sans-serif,monospace;
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 
+.selected{
+    background-color: rgba(black,0.8);
+    text-decoration: white;
+}

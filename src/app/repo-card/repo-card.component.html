@@ -6,21 +6,21 @@
     <p class="text-neutral-400">{{ repo.description }}</p>
   </div>
 
-  <div class="px-4 py-2 bg-neutral-800">
+  <div class="px-4 py-2 bg-neutral-800 flex items-center">
     <div>
       <span
         *ngFor="let topic of repo.topics.slice(0, 2)"
-        class="inline-block bg-neutral-700 rounded-full px-3 py-1 text-sm font-semibold text-neutral-200 mr-2 mb-2"
+        class="inline-block selected rounded-full px-3 py-1 text-sm font-semibold "
         >{{ repo.language }}</span
       >
     </div>
     <span
-      class="inline-block bg-neutral-700 rounded-full px-3 py-1 text-sm font-semibold text-neutral-200 mr-2 mb-2"
+      class="inline-block selected rounded-full px-4 py-1 text-sm font-semibold"
       >Stars: {{ repo.stargazers_count }}</span
     >
     <a
       href="{{ repo.html_url }}"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full inline-block"
+      class="bg-black hover:selected text-white font-bold py-1 px-4 text-sm rounded-full inline-block"
       target="_blank"
       >View Repo</a
     >

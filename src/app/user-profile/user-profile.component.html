@@ -1,5 +1,5 @@
 <app-input (searchUser)="getUserProfile($event)" />
-<div *ngIf="error" class="text-red-300 grid text-center text-2xl">
+<div *ngIf="error" class="font-semibold text-red-500 grid text-center text-2xl">
   {{ error }}
 </div>
 <div *ngIf="isProfileLoading; else loadedContent">

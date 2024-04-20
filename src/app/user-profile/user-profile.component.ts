@@ -57,7 +57,7 @@ export class UserProfileComponent {
         this.isProfileLoading = false;
       },
       error: (error) => {
-        this.error = 'Can Not Find Any User With Given UserName.';
+        this.error = 'Invalid UserName';
         this.isProfileLoading = false;
       },
     });
