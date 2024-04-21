@@ -6,21 +6,23 @@
     <p class="text-neutral-400 truncate">{{ repo.description }}</p>
   </div>
 
-  <div class="px-4 py-2 bg-neutral-800 items-center gap-2">
+  <div
+    class="flex overflow-x-auto px-4 py-2 bg-neutral-800 items-center gap-2 w-full"
+  >
     <div class="flex gap-1">
       <span
         *ngFor="let language of repo.languages | keyvalue"
-        class="inline-block selected text-white rounded-full px-3 py-1 text-sm font-semibold"
+        class="selected text-white rounded-full px-3 py-1 text-sm font-semibold truncate"
         >{{ language.key }}</span
       >
     </div>
     <span
-      class="inline-block selected rounded-full text-white px-4 py-1 text-sm font-semibold"
+      class="selected rounded-full text-white px-4 py-1 text-sm font-semibold truncate"
       >Stars: {{ repo.stargazers_count }}</span
     >
     <a
       href="{{ repo.html_url }}"
-      class="bg-black hover:selected text-white font-bold py-1 px-4 text-sm rounded-full inline-block"
+      class="bg-black hover:selected text-white font-bold py-1 px-4 text-sm rounded-full truncate"
       target="_blank"
       >View Repo</a
     >
