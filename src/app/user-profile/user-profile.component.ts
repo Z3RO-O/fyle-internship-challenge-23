@@ -73,6 +73,7 @@ export class UserProfileComponent {
       .subscribe({
         next: (repos: Repo[]) => {
           this.repos = repos;
+          this.getLanguagesForRepos();
           this.isLoading = false;
         },
         error: (error: string) => {
@@ -81,6 +82,20 @@ export class UserProfileComponent {
           this.isProfileLoading = false;
         },
       });
+  }
+
+  getLanguagesForRepos() {
+    for (const repo of this.repos) {
+      this.apiService.getRepoLanguages(repo.full_name).subscribe({
+        next: (languages: any) => {
+          repo.languages = languages;
+          console.log(repo.languages);
+        },
+        error: (error) => {
+          console.error(`Error fetching languages for ${repo.name}:`, error);
+        },
+      });
+    }
   }
 
   changePage(pageNum: number | string) {

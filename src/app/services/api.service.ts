@@ -42,6 +42,12 @@ export class ApiService {
     }
   }
 
+  getRepoLanguages(full_name: string): Observable<any> {
+    return this.httpClient
+      .get<any>(`${this.url}/repos/${full_name}/languages`)
+      .pipe(catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'An unknown error occurred';
     if (error.error instanceof ErrorEvent) {

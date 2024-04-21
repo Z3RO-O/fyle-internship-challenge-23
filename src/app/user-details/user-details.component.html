@@ -1,6 +1,6 @@
 <div *ngIf="user" class="max-w-3xl mx-auto mt-8">
   <div
-    class="items-center justify-center selected  shadow-lg rounded-lg overflow-hidden flex flex-col sm:flex-row border-[0.5px] p-2 ring-neutral-100"
+    class="items-center justify-center selected shadow-lg rounded-lg overflow-hidden flex flex-col sm:flex-row border-[0.5px] p-2 ring-neutral-100"
   >
     <img
       [src]="user.avatar_url"
@@ -13,20 +13,20 @@
       <p class="text-gray-300 mt-2">{{ user.bio || "No Bio available" }}</p>
       <div class="flex justify-between mt-4">
         <div class="flex gap-1 text-gray-300">
-          <p>Followers :</p>
           <p class="font-semibold">{{ user.followers }}</p>
+          <p>Followers</p>
         </div>
         <div class="flex gap-1 text-gray-300">
-          <p>Following :</p>
           <p class="font-semibold">{{ user.following }}</p>
+          <p>Following</p>
         </div>
         <div class="flex gap-1 text-gray-300">
-          <p>Repositories :</p>
           <p class="font-semibold">{{ user.public_repos }}</p>
+          <p>Repositories</p>
         </div>
       </div>
-      <div class="mt-3 flex">
-        <p class="text-gray-300">Twitter :</p>
+      <div class="mt-3 gap-1 flex">
+        <p class="text-gray-300">Twitter</p>
         <p>
           <a
             [href]="'https://twitter.com/' + user.twitter_username"
