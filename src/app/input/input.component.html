@@ -9,14 +9,14 @@
       type="text"
       id="username"
       placeholder="Username"
-      class="w-full p-2 pl-5 rounded-xl outline outline-offset-0 outline-1 outline-neutral-600"
+      class="w-full p-2 pl-5 rounded-xl outline shadow-md outline-offset-0 outline-1 outline-neutral-600"
       formControlName="username"
       required
     />
     <button
       type="submit"
       [disabled]="!usernameForm.valid"
-      class="primary p-2 rounded-lg text-sm font-semibold disabled:bg-white border-[1px] border-black"
+      class="p-2 rounded-lg text-sm shadow-md font-semibold disabled:cursor-not-allowed disabled:bg-white border-[1px] border-black hover:bg-black hover:text-white disabled:text-black"
     >
       Search
     </button>

@@ -1,13 +1,16 @@
 <div class="m-4 mt-8">
-  <h2 class="text-2xl font-bold mb-4 underline">Repositories</h2>
+  <h2 class="text-2xl font-bold mb-4">Repositories</h2>
   <div
-    class="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"
+    *ngIf="true; else loadedContent"
+    class="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8"
   >
-    <div *ngIf="isLoading; else loadedContent">
-      <div *ngFor="let _ of [].constructor(10)">
-        <app-skeleton-repo-card></app-skeleton-repo-card>
-      </div>
+    <div *ngFor="let _ of [].constructor(10)">
+      <app-skeleton-repo-card></app-skeleton-repo-card>
     </div>
+  </div>
+  <div
+    class="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8"
+  >
     <ng-template #loadedContent>
       <div *ngFor="let repo of repos">
         <app-repo-card [repo]="repo"></app-repo-card>

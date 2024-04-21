@@ -1,12 +1,12 @@
 <div
-  class="bg-neutral-900 h-full flex flex-col justify-between rounded-lg shadow-md overflow-hidden"
+  class="bg-neutral-900 h-[180px] flex flex-col justify-between rounded-lg shadow-md overflow-hidden"
 >
   <div class="p-4">
     <div class="font-bold text-xl mb-2 text-neutral-100">{{ repo.name }}</div>
-    <p class="text-neutral-400">{{ repo.description }}</p>
+    <p class="text-neutral-400 truncate">{{ repo.description }}</p>
   </div>
 
-  <div class="px-4 py-2 bg-neutral-800 flex items-center gap-2">
+  <div class="px-4 py-2 bg-neutral-800 items-center gap-2">
     <div class="flex gap-1">
       <span
         *ngFor="let language of repo.languages | keyvalue"
