@@ -5,7 +5,7 @@
 - Pagination is server-side.
 - Any invalid user will give us error while fetching and such errors is handled well.
 
-- Added test for user-profile component and api service used in the app with 100% code coverage.
+- Added test for user-details component and api service used in the app with 100% code coverage.
 
 ### Install requirements
 
